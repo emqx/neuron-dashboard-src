@@ -61,6 +61,7 @@ export interface DriverStateData {
   running: NodeState
   link: NodeLinkState
   rtt?: number
+  log_level: string
 }
 
 export interface DriverAllStatusData {

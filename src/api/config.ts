@@ -169,8 +169,8 @@ export const queryNodeConfig = async (node: string) => {
   }
 }
 
-export const updateNodeLogLevelToDebug = (nodeName: string) => {
-  return http.put('/log/level', { node: nodeName })
+export const updateNodeLogLevelToDebug = (nodeName: string, logLevel: string) => {
+  return http.put('/log/level', { node: nodeName, level: logLevel })
 }
 
 /* GROUP */

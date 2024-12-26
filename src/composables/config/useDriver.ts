@@ -151,9 +151,9 @@ export const dataStatistics = () => {
 export const useNodeDebugLogLevel = () => {
   const { t } = useI18n()
 
-  const modifyNodeLogLevelToDebug = async (nodeName: string) => {
+  const modifyNodeLogLevelToDebug = async (nodeName: string, logLevel: string) => {
     try {
-      await updateNodeLogLevelToDebug(nodeName)
+      await updateNodeLogLevelToDebug(nodeName, logLevel)
       EmqxMessage.success(t('config.modifyNodeLogLevelSuc'))
       return Promise.resolve()
     } catch (error) {
