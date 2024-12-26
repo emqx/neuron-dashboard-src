@@ -191,7 +191,7 @@ export default (autoLoad = true, needRefreshStatus = false) => {
   }
 
   const modifyNodeLogLevel = async (node: DriverItemInList) => {
-    await modifyNodeLogLevelToDebug(node.name)
+    await modifyNodeLogLevelToDebug(node.name, node.log_level)
   }
 
   const reloadDriverList = () => {
