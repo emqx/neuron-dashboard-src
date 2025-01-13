@@ -7,7 +7,7 @@ function resolve(dir) {
 
 // ECP
 const { VUE_APP_SUB_APP = true } = process.env
-const IntegratedVersion = '2.5.0'
+const IntegratedVersion = '2.6.0'
 
 let publicPath = '/web'
 const name = `neuron-${IntegratedVersion}`
