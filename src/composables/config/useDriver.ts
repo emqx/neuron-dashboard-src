@@ -153,7 +153,8 @@ export const useNodeDebugLogLevel = () => {
 
   const modifyNodeLogLevelToDebug = async (nodeName: string, logLevel: string) => {
     try {
-      await updateNodeLogLevelToDebug(nodeName, logLevel)
+      const currentLogLevel = logLevel === 'debug' ? 'notice' : 'debug'
+      await updateNodeLogLevelToDebug(nodeName, currentLogLevel)
       EmqxMessage.success(t('config.modifyNodeLogLevelSuc'))
       return Promise.resolve()
     } catch (error) {

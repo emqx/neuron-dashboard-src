@@ -16,7 +16,7 @@ export function replacePath(
 }
 
 // Modify according to the integrated version, such as the integrated `neuron` version `2.5.1`, please modify the version to `v2.5.1`
-export const IntegratedVersion = '2.5.0'
+export const IntegratedVersion = '2.6.0'
 export const IntegratePublicPath = `/integration/neuron/v${IntegratedVersion}`
 
 export const getIntegratedAPI = (serviceId: string, url: string) => `/api/edgeservice/proxy/${serviceId}/api/v2${url}`
