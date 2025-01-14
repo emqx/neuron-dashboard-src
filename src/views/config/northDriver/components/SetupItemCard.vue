@@ -37,7 +37,13 @@
                 <span>{{ $t(`common.edit`) }}</span>
               </emqx-dropdown-item>
               <emqx-dropdown-item class="operation-item-wrap" command="debugLogLevel">
-                <img class="operation-image" src="~@/assets/images/debug-log-icon.png" alt="debug-log" />
+                <img
+                  v-if="data.log_level === 'debug'"
+                  class="operation-image"
+                  src="~@/assets/images/debug-log-off.png"
+                  alt="debug-log"
+                />
+                <img v-else class="operation-image" src="~@/assets/images/debug-log-on.png" alt="debug-log" />
                 <span>{{ $t(`config.updateDebugLogLevel`) }}</span>
               </emqx-dropdown-item>
               <emqx-dropdown-item
